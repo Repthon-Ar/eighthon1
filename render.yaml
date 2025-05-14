@@ -1,0 +1,32 @@
+services:
+  - type: web
+    runtime: python
+    name: repthon
+    plan: free
+    branch: main
+    buildCommand: ./build.sh
+    startCommand: python3 app.py & python3 eighthon.py
+    repo: https://github.com/Repthon-Ar/eighthon1.git
+    region: frankfurt
+    envVars:
+      - key: API_ID
+        value: 13740761
+      - key: API_HASH
+        value: 4ce319a92c01fab2b02551af8d7f73a4
+      - key: TERMUX
+        sync: false
+      - key: TOKEN
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.10.9
+      - key: BOT_USERNAME
+        sync:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: postgres
+          property: connectionString
+
+databases:
+  - name: postgres
+    plan: free
+    region: frankfurt
