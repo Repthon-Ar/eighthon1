@@ -3,7 +3,7 @@ services:
     runtime: python
     name: repthon
     plan: free
-    branch: main
+    branch: master
     buildCommand: ./build.sh
     startCommand: python3 app.py & python3 eighthon.py
     repo: https://github.com/Repthon-Ar/eighthon1.git
