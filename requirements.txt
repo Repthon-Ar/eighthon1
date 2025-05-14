@@ -1,5 +1,6 @@
 telethon
-googletrans==3.1.0a0
+pyrogram
+googletrans
 hijri_converter
 user_agent
 heroku3
@@ -11,4 +12,4 @@ sqlalchemy
 asyncio
 aiohttp
 flask
-Flask==2.2.5
+flask_restful
