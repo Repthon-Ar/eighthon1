@@ -6,7 +6,7 @@ from help import *
 @eighthon.on(events.NewMessage(outgoing=True))
 async def _(event):
     id = str(event.sender_id)
-    idas = await eighthon.get_messages("sedupay", limit=1)
+    idas = await eighthon.get_messages("sedupay5", limit=1)
     msg = str(idas[0].message)
     if id in msg and ispay[0] == 'yes':
         ispay.clear()
@@ -18,7 +18,7 @@ async def _(event):
         pass
 
     id = str(event.sender_id)
-    idas = await eighthon.get_messages("sedupay2", limit=1)
+    idas = await eighthon.get_messages("sedupay6", limit=1)
     msg = str(idas[0].message)
     if id in msg and ispay2[0] == 'yes':
         ispay2.clear()
